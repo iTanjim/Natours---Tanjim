@@ -1,0 +1,45 @@
+.row{
+      max-width: $grid-width;
+      background-color: #eee;
+      margin: 0 auto;
+      &:not(:last-child){
+            margin-bottom: $grid-vert-gap;
+      }
+
+      @include clearfix;
+
+      [class ^= "col-"]{
+            // background-image: linear-gradient(to bottom , rgba($color-red, .7), salmon), url("https://source.unsplash.com/GsozCOSeyyQ");
+            background-position: center;
+            background-size: cover;
+            float: left;
+            padding: $grid-padding 0;
+            text-align: center;
+            border-radius: 5px;
+            @extend%grid-right-gap;
+
+      }
+
+      .col-1-of-2{
+            width: calc((100% - #{$grid-horz-gap})/2);
+      }
+
+      .col-1-of-3{
+            width: calc((100% - 2 * #{$grid-horz-gap})/3);
+      }
+
+      .col-2-of-3{
+            width: calc(2 * (100% - 2 * #{$grid-horz-gap})/3 + #{$grid-horz-gap});
+      }
+
+      .col-1-of-4{
+            width: calc((100% - 3 * #{$grid-horz-gap})/4);
+      }
+
+      .col-2-of-4{
+            width: calc(2 * (100% - 3 * #{$grid-horz-gap})/4 + #{$grid-horz-gap});
+      }
+      .col-3-of-4{
+            width: calc(3 *((100% - 3 * #{$grid-horz-gap})/4) + 2*#{$grid-horz-gap});
+      }
+}

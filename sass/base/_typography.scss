@@ -1,0 +1,68 @@
+.heading-primary{
+    font-family: $main-font;
+    color: $color-white;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+
+    &-main{
+      display: block;
+      font-size: 4rem;
+      text-transform: uppercase;
+      letter-spacing: 2rem;
+      font-weight: 500;
+      animation: slideLeft 1s ease-out;
+    }
+
+    &-sub{
+      display: block;
+      font-weight: 300;
+      font-size: 2rem;
+      letter-spacing: 1.3rem;
+      animation: slideRight 1s ease-out;
+      margin-bottom: 2rem;
+
+    }
+
+  }
+
+  .btn{
+    font-family: $main-font;
+  }
+
+  .heading-secondary{
+    margin: 0 auto;
+    width: 70%;
+    font-family: 'lato';
+    font-size:  3rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: transparent;
+    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    background-clip: text;
+    text-align: center;
+    letter-spacing: 2px;
+    transition: all .3s;
+
+    &:hover{
+      transform: skewX(5deg)skewY(2deg) scale(1.1);
+      text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+    }
+  }
+
+  .section-about{
+    color: $color-black;
+  }
+  .heading-tertiary{
+    font-family: "lato", sans-serif;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
+
+  .paragraph{
+    font-family: "lato", sans-serif;
+    font-size: 1.1rem; 
+    text-align: start;
+    &:not(:last-child){
+      margin-bottom: 3.5rem;
+    }
+  }
